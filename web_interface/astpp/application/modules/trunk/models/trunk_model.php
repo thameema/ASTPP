@@ -45,6 +45,7 @@ class trunk_model extends CI_Model
 
     function add_trunk($add_array)
     {
+        unset($add_array["id"]);
         unset($add_array["action"]);
         $add_array['creation_date'] = gmdate('Y-m-d H:i:s');
         $add_array['last_modified_date'] = gmdate('Y-m-d H:i:s');
